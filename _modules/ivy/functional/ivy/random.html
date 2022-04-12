@@ -203,24 +203,19 @@
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="c1"># local</span>
-<span class="kn">import</span> <span class="nn">ivy</span>
 <span class="kn">from</span> <span class="nn">ivy.framework_handler</span> <span class="kn">import</span> <span class="n">current_framework</span> <span class="k">as</span> <span class="n">_cur_framework</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span>
+
 
 <span class="c1"># Extra #</span>
+<span class="kn">import</span> <span class="nn">ivy</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span><span class="n">Union</span>
 <span class="c1"># ------#</span>
-
 
 <div class="viewcode-block" id="random_uniform"><a class="viewcode-back" href="../../../../functional/ivy/random/random_uniform.html#ivy.functional.ivy.random.random_uniform">[docs]</a><span class="k">def</span> <span class="nf">random_uniform</span><span class="p">(</span><span class="n">low</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">high</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
                    <span class="n">shape</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Dtype</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                    <span class="n">dev</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Device</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>\
         <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">array</span><span class="p">:</span>
-
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Draws samples from a uniform distribution.</span>
-<span class="sd">    Samples are uniformly distributed over the half-open interval [low, high) (includes low, but excludes high).</span>
-<span class="sd">    In other words, any value within the given interval is equally likely to be drawn by uniform.</span>
-<span class="sd">    </span>
 <span class="sd">    Parameters</span>
 <span class="sd">    -----------</span>
 <span class="sd">    low: float</span>
@@ -232,12 +227,12 @@
 <span class="sd">            If size is None(Default), a single value is returned</span>
 <span class="sd">    dev:</span>
 <span class="sd">        device on which to create the array &#39;cuda 0&#39;, &#39;cuda:1&#39; , &#39;cpu&#39; etc.</span>
-<span class="sd">    </span>
+
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
 <span class="sd">    ivy.Array</span>
 <span class="sd">        Drawn samples from the parameterized uniform distribution</span>
-<span class="sd">    </span>
+
 <span class="sd">      Examples:</span>
 <span class="sd">        &gt;&gt;&gt; x = ivy.array([0.0, 2.0])</span>
 <span class="sd">        &gt;&gt;&gt; y = ivy.random_uniform(0.0,1.0,None)</span>
