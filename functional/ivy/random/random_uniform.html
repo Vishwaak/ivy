@@ -219,33 +219,26 @@
 <dt id="ivy.functional.ivy.random.random_uniform">
 <code class="sig-prename descclassname">ivy.</code><code class="sig-name descname">random_uniform</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">low</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">high</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">shape</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>ivy.Dtype<span class="p">, </span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dev</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>ivy.Device<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; &lt;module ‘ivy.array’ from ‘/home/runner/work/ivy/ivy/ivy/ivy/array/__init__.py’&gt;<a class="reference internal" href="../../../_modules/ivy/functional/ivy/random.html#random_uniform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ivy.functional.ivy.random.random_uniform" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
-<dt>low: float</dt><dd><p>Lower boundary of the output interval. All values generated will be greter than or equal to low.</p>
+<dt>low</dt><dd><p>Lower boundary of the output interval. All values generated will be greter than or equal to low.</p>
 </dd>
-<dt>high: float</dt><dd><p>Upper boundary of the output intercal. All the values genrated will be lesser than than high..</p>
+<dt>high</dt><dd><p>Upper boundary of the output intercal. All the values genrated will be lesser than than high..</p>
 </dd>
-<dt>shape:</dt><dd><dl class="simple">
-<dt>If the given shape is, e.g (m, n, k), then m * n * k samples are drawn.</dt><dd><p>If size is None(Default), a single value is returned</p>
+<dt>shape</dt><dd><p>If the given shape is, e.g (m, n, k), then m * n * k samples are drawn.
+If size is None (Default), a single value is returned.</p>
 </dd>
-</dl>
-</dd>
-<dt>dev:</dt><dd><p>device on which to create the array ‘cuda 0’, ‘cuda:1’ , ‘cpu’ etc.</p>
+<dt>dev</dt><dd><p>device on which to create the array ‘cuda 0’, ‘cuda:1’, ‘cpu’ etc.</p>
 </dd>
 </dl>
-<dl>
-<dt>ivy.Array</dt><dd><blockquote>
-<div><p>Drawn samples from the parameterized uniform distribution</p>
-</div></blockquote>
-<dl>
-<dt>Examples:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">])</span>
+<dl class="simple">
+<dt>ivy.Array</dt><dd><p>Drawn samples from the parameterized uniform distribution</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">random_uniform</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="kc">None</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 <span class="go">[1.0]</span>
 </pre></div>
 </div>
-</dd>
-</dl>
-</dd>
-</dl>
 </dd></dl>
 
 <div class="line-block">
